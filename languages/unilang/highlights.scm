@@ -10,7 +10,6 @@
   "else"
   "return"
   "impl"
-  "self"
 ] @keyword
 
 ; Special keywords
