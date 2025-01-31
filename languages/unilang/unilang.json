@@ -1,7 +1,0 @@
-{
-  "name": "Unilang",
-  "grammar": "tree-sitter-unilang",
-  "file_extensions": ["uni", "unilang"],
-  "scope": "source.unilang",
-  "theme": "unilang"
-}
