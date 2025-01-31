@@ -7,3 +7,4 @@ description = "Add language support for the unilang programming language."
 repository = "https://github.com/Paul-Passeron/unilang-support"
 [grammars.unilang]
 repository = "https://github.com/Paul-Passeron/tree-sitter-unilang"
+commit = "c7c848490a8b07e776c6452edb134ba2b6b342eb"
