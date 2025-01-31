@@ -1,90 +1,95 @@
-(comment) @comment
-
-(string_literal) @string
-(escaped_char) @string.escape
-(number_literal) @number
-(boolean_literal) @boolean
-"null" @constant
-
+; Keywords
 [
- "[" "]"
- "{" "}"
- "(" ")"
-] @punctuation.bracket
-
-[
- ","
- "."
- ":"
- ";"
-] @punctuation.delimiter
-
-[
- "or"
- "xor"
- "and"
- "not"
- "="
- "<>"
- "<"
- ">"
- "<="
- ">="
- "-"
- "+"
- "*"
- "/"
- "%"
- "^"
-] @operator
-
-[
- "all"
- "asc"
- "ascending"
- "by"
- "create"
- "delete"
- "desc"
- "descending"
- "detach"
- "exists"
- "limit"
- "match"
- "merge"
- "on"
- "optional"
- "order"
- "remove"
- "set"
- "skip"
- "where"
- "with"
- "union"
- "unwind"
- "as"
- "contains"
- "distinct"
- "ends"
- "in"
- "is"
- "starts"
- "constraint"
- "unique"
- "case"
- "when"
- "then"
- "else"
- "end"
- "mandatory"
- "scalar"
- "of"
- "add"
- "drop"
+  "class"
+  "interface"
+  "public"
+  "private"
+  "let"
+  "while"
+  "if"
+  "else"
+  "return"
+  "impl"
+  "self"
 ] @keyword
 
-"return" @keyword.return
+; Special keywords
+[
+  "@include"
+  "@new"
+  "@as"
+] @keyword.directive
 
-(node_pattern) @constant
-(relationship_pattern) @constant
-(variable) @type
+; Operators
+[
+  "=>"
+  "::"
+  "="
+  "+"
+  "-"
+  "*"
+  "/"
+  "<"
+  ">"
+  "<="
+  ">="
+  "!="
+  "&&"
+  "||"
+] @operator
+
+; Types
+(simple_type) @type
+(generic_type
+  base: (identifier) @type)
+
+; Type constraints
+(type_constraint
+  type: (identifier) @type
+  constraint: (identifier) @type.builtin)
+
+; Function and method declarations
+(function_definition
+  name: (identifier) @function)
+(method_definition
+  name: (identifier) @function.method)
+(method_declaration
+  name: (identifier) @function.method)
+
+; Parameters
+(parameter
+  name: (identifier) @variable.parameter)
+
+; Variable declarations
+(variable_declaration
+  name: (identifier) @variable)
+
+; Field declarations
+(field_declaration
+  name: (identifier) @variable.member)
+
+; Member access
+(member_access
+  member: (identifier) @variable.member)
+
+; Function calls
+(call_expression
+  function: (identifier) @function)
+
+; Literals
+(number_literal) @number
+(string_literal) @string
+(boolean_literal) @boolean
+
+; Comments
+(comment) @comment
+
+; Namespaces
+(namespace_path
+  segment: (identifier) @namespace)
+
+; Class names
+(class_definition
+  name: (identifier) @type)
+(interface_definition
+  name: (identifier) @type)
