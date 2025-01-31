@@ -1,0 +1,4 @@
+name = "Unilang"
+grammar = "unilang"
+path_suffixes=["ul"]
+line_comments=["//"]
