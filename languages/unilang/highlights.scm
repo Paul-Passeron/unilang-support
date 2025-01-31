@@ -23,7 +23,6 @@
 [
   "=>"
   "::"
-  "="
   "+"
   "-"
   "*"
@@ -45,7 +44,7 @@
 ; Type constraints
 (type_constraint
   type: (identifier) @type
-  constraint: (identifier) @type.builtin)
+  constraint: (identifier) @type)
 
 ; Function and method declarations
 (function_definition
@@ -71,10 +70,6 @@
 (member_access
   member: (identifier) @variable.member)
 
-; Function calls
-(call_expression
-  function: (identifier) @function)
-
 ; Literals
 (number_literal) @number
 (string_literal) @string
@@ -86,9 +81,3 @@
 ; Namespaces
 (namespace_path
   segment: (identifier) @namespace)
-
-; Class names
-(class_definition
-  name: (identifier) @type)
-(interface_definition
-  name: (identifier) @type)
