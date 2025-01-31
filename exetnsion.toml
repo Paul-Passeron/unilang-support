@@ -5,6 +5,7 @@ schema_version = 1
 authors = ["Paul Passeron paul.passeron2@gmail.com"]
 description = "Add language support for the unilang programming language."
 repository = "https://github.com/Paul-Passeron/unilang-support"
+rev = "8d6d110cb66320a263043d7591fb2177e41227d1"
 [grammars.unilang]
 repository = "https://github.com/Paul-Passeron/tree-sitter-unilang"
 rev = "56c96bff8ab96e471bc5c4ee128bd2e21c042bf1"
