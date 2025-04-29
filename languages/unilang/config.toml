@@ -1,4 +1,11 @@
 name = "Unilang"
 grammar = "unilang"
-path_suffixes=["ul"]
-line_comments=["//"]
+path_suffixes = ["ul"]
+line_comments = ["//"]
+block_comment = ["/*", " */"]
+brackets = [
+    { start = "{", end = "}", close = true, newline = true },
+    { start = "(", end = ")", close = true, newline = true },
+    { start = "\"", end = "\"", close = true, newline = false },
+    { start = "'", end = "'", close = true, newline = false },
+]

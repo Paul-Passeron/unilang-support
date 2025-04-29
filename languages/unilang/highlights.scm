@@ -1,3 +1,5 @@
+; highlights.scm
+
 ; Keywords
 [
   "class"
@@ -10,6 +12,7 @@
   "else"
   "return"
   "impl"
+  "module"
 ] @keyword
 
 ; Special keywords
@@ -27,7 +30,6 @@
   "-"
   "*"
   "/"
-  "%"
   "<"
   ">"
   "<="
