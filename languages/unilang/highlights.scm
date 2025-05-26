@@ -2,6 +2,7 @@
 
 ; Keywords
 [
+  "module"
   "class"
   "interface"
   "public"
@@ -12,7 +13,6 @@
   "else"
   "return"
   "impl"
-  "module"
 ] @keyword
 
 ; Special keywords
@@ -84,3 +84,7 @@
 ; Namespaces
 (namespace_path
   segment: (identifier) @namespace)
+
+; Module
+(module_definition
+  name: (identifier) @type)

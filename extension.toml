@@ -1,10 +1,10 @@
 id = "unilang"
 name = "Unilang Support"
-version = "0.0.1"
+version = "0.0.2"
 schema_version = 1
 authors = ["Paul Passeron paul.passeron2@gmail.com"]
 description = "Add language support for the unilang programming language."
 repository = "https://github.com/Paul-Passeron/unilang-support"
 [grammars.unilang]
 repository = "https://github.com/Paul-Passeron/tree-sitter-unilang"
-commit = "ca2f9bf107617e9af4bdccee85557c1d11cb0b44"
+commit = "7899e6174c8d9d6c80bdfb01a7b54a90593debc7"
